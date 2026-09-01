@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    admin:
+      auto-create: false
+      flyway:
+        enabled: false
