@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-test-master.yaml
+    duplicate-file-mode: warn
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    admin:
+      auto-create: false
