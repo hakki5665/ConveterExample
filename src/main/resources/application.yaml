@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: converter-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/conversions
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  kafka:
+    bootstrap-servers: localhost:9092
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: minioadmin
+  secret-key: minioadmin
+  bucket: conversions
+
+  flyway:
+    enabled: false
