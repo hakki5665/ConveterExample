@@ -4,7 +4,7 @@ spring:
       ddl-auto: validate
     show-sql: true
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-test-master.yaml
+    change-log: classpath:db/changelog/db.changelog-master.yaml
     duplicate-file-mode: warn
   kafka:
     consumer:
