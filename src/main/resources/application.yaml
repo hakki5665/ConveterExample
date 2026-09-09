@@ -26,8 +26,9 @@ minio:
 
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}
   instance:
@@ -43,5 +44,7 @@ management:
     health:
       show-details: always
 
+server:
+  port: 8082
 
 
